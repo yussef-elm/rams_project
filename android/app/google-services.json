@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "414944049313",
+    "project_id": "ramsystem-e20a2",
+    "storage_bucket": "ramsystem-e20a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414944049313:android:47d0436d0056c7e870d8e0",
+        "android_client_info": {
+          "package_name": "com.example.rams_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414944049313-c6s2pjhappup9f79s7ihfqt56rk6io3g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAyBYhMSCVtaqcRJwEKDcmGJsPDZ3Rags"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414944049313-c6s2pjhappup9f79s7ihfqt56rk6io3g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
