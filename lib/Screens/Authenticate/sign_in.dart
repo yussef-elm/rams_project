@@ -8,6 +8,7 @@ import '../../Helpers/already_have_an_account_acheck.dart';
 import '../../Helpers/rounded_button.dart';
 import '../../Helpers/rounded_input_field.dart';
 import '../../Helpers/rounded_password_field.dart';
+import '../../Shared/loading.dart';
 import 'background.dart';
 
 class SignIn extends StatefulWidget {
@@ -20,6 +21,7 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   final AuthService _auth = AuthService();
   final GlobalKey<FormState> _formKey = GlobalKey();
+  bool loading = false ;
   // textfields states:
   String email ='';
   String password = '';
@@ -27,7 +29,7 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       body : SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 90,horizontal: 50),
@@ -78,10 +80,14 @@ class _SignInState extends State<SignIn> {
                   text: "LOGIN",
                   press: () async {
                     if(_formKey.currentState!.validate()){
+                      setState(() =>
+                        loading = true
+                      );
                       dynamic result = await _auth.SignInWithEmailAndPassword(email, password);
                       if(result == null){
                         setState(() {
                           error = 'Siging in failed! Please retry later!';
+                          loading = false ;
                         });
                       }
                     }

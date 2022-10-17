@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rams_project/Services/auth.dart';
+import '../../Shared/map.dart';
 
 import '../../constants.dart';
 
@@ -25,6 +26,7 @@ class Home extends StatelessWidget{
           )
         ],
       ),
+      body: Map(),
     );
   }
 }
